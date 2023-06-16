@@ -21,7 +21,7 @@ class ChildClass extends ParentClass{
 	}
 }
 
-//public class Inheritance1{
+public class Inheritance1{
 	public static void main(String args[]){
 		ParentClass parentclass = new ParentClass();
 		parentclass.getInfo();
@@ -30,6 +30,6 @@ class ChildClass extends ParentClass{
 		childclass.getInfo();
 		
 	}
-//}
+}
 
 	
