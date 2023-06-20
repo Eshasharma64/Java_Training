@@ -8,20 +8,37 @@ Create an object of the  AddAmount class and display the final amount in the Pig
 
 
 
+ 
+import java.util.Scanner;
 public class AddAmount{
-	private int amount = 50;
+	static int amount = 50;
 	AddAmount()
 	{
-		System.out.println("Initial Amount:"+amount);
+		int sum=0;
+		amount=amount+sum;
+		System.out.println("Balance in your piggie bank::" +amount);
 	}
-	AddAmount(int a)
-	{
-		this.amount = amount + a;
-		System.out.println("Final amount:" +amount);
+	AddAmount(int sum){
+		amount = amount + sum;
+		System.out.println("Balance in your piggie bank::" +amount);
 	}
-	public static void main(String args[]){
-		AddAmount addamount = new AddAmount();
-		AddAmount addamount1 = new AddAmount(90);
+	
+	public static void main(String []args){
+		Scanner s = new Scanner(System.in);
+		int amt;
+		
+		do{
+			System.out.println("Enter the amount you want to enter:" );
+			amt=s.nextInt();
+			if(amt>0){
+				AddAmount obj = new AddAmount(amt);
+				amt=amt+amount; 
+			}
+			else{
+				System.out.println("Your final balance is:" +amount);
+			}
+		}while(amt!=0);
+		
+		
 	}
 }
-		
